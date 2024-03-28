@@ -293,15 +293,5 @@ public class Main {
          4 3 3 3 3 3 4
          4 4 4 4 4 4 4
      */
-    static void Pattern10(int n)
-    {
-        for(int row = 1; row <= 2*n; row++)
-        {
-            for(int col = 1; col <= 2*n-1;col++)
-            {
-                int atEveryIn
-            }
 
-        }
-    }
 }
