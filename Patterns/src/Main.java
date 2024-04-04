@@ -1,9 +1,11 @@
+import java.sql.SQLOutput;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         int n = 4;
-        Pattern9(n);
+        Pattern10(n);
     }
 
     /* pattern1
@@ -285,13 +287,39 @@ public class Main {
         }
     }
     /*
-         4 4 4 4 4 4 4
-         4 3 3 3 3 3 4
-         4 3 2 2 2 3 4
-         4 3 2 1 2 3 4
-         4 3 2 2 2 3 4
-         4 3 3 3 3 3 4
-         4 4 4 4 4 4 4
-     */
+         4 4 4 4 4 4 4 4 4
+         4 3 3 3 3 3 3 3 4
+         4 3 2 2 2 2 2 3 4
+         4 3 2 1 1 1 2 3 4
+         4 3 2 1 4 1 2 3 4
+         4 3 2 1 1 1 2 3 4
+         4 3 2 2 2 2 2 3 4
+         4 3 3 3 3 3 3 3 4
+         4 4 4 4 4 4 4 4 4
 
+     */
+    static void Pattern10(int n)
+    {
+        int Nor,Sou, Eas, Wes;
+        for(int i = 0; i<=2*n; i++)
+        {
+            for(int j = 0; j<=2*n;j++) {
+                Nor = i;
+                Sou = 2*n - i;
+                Eas = j;
+                Wes = 2*n -j;
+                int Min = n - Math.min(Math.min(Nor, Sou) , Math.min(Eas, Wes));
+                if (Min == 0)
+                {
+                    System.out.print(n);
+                }
+                else
+                {
+                    System.out.print(Min);
+                }
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
 }
